@@ -3,6 +3,7 @@ on: [push]
 defaults:
     run:
         shell: bash
+        working-directory: /home/runner   
 jobs:
     display-wd-ubuntu-info:
         runs-on: ubuntu-latest
@@ -15,6 +16,9 @@ jobs:
                 echo $GITHUB_SHA
                 echo $GITHUB_REPOSITORY
                 echo $GITHUB_WORKSPACE
+            # - name: Change the Working Directory
+            #   working-directory: /home/runner
+            #   run: pwd    
     # display-wd-windows-info:
     #     runs-on: windows-latest
     #     steps:
@@ -35,7 +39,4 @@ jobs:
                 ls -al
                 echo $GITHUB_SHA
                 echo $GITHUB_REPOSITORY
-                echo $GITHUB_WORKSPACE                    
-                    
-            
-
+                echo $GITHUB_WORKSPACE
