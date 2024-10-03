@@ -17,12 +17,11 @@ jobs:
         steps:
             - name: Display Working Directory and List Files
               run: |
-                pwd
-                ls -a
-                ls -al
-                echo $GITHUB_SHA
-                echo $GITHUB_REPOSITORY
-                echo $GITHUB_WORKSPACE        
+                Get-location
+                dir
+                echo $env:GITHUB_SHA
+                echo $env:GITHUB_REPOSITORY
+                echo $env:GITHUB_WORKSPACE        
                     
             
 
