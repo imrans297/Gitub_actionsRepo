@@ -1,9 +1,8 @@
 name: Working Dirs & Shell
 on: [push]
-# defaults:
-#     # run:
-#     #     shell: bash
-#     #     working-directory: /home/runner   
+defaults:
+    run:
+        shell: bash
 jobs:
     display-wd-ubuntu-info:
         runs-on: ubuntu-latest
