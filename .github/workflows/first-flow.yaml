@@ -23,5 +23,5 @@ jobs:
         - name: echo a string
           run: Write-Output "windows String"
         - name: Error Step
-          run: dosenotexits                 
+          run: dosenotexitss                 
                    
