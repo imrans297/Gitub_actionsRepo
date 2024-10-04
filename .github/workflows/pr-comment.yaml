@@ -1,0 +1,18 @@
+name: PUll request comment
+on:
+    pull_request_target:
+        types: [opened]
+jobs:
+    pr-comment:
+        runs-on: ubuntu-latest
+        steps:
+            - name: comment on New PRs
+              uses: actions/github-script@v7
+              with:
+               script: |
+                github.rest.issues.createComment({
+                   owner: context.repo.owner,
+                   repo: context.repo.repo,
+                  issue_number: context.issue.number,
+                  body: 'Thank you for opening a pull request! We will review it soon.'
+                });
