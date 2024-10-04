@@ -33,5 +33,6 @@ jobs:
         - name: List Files After
           run: |
             ls -a
-            pwd      
+            pwd
+            ls -al     
 
