@@ -8,5 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: This is testing of WF dependednt
-
         run: echo "This Workflow was triggered because 'Repository Events WorkFLOW' was completed"
