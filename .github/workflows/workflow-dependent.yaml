@@ -7,4 +7,4 @@ jobs:
   echo-string:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "This Work_flow was triggered because 'Repository Events' was completed"       
+      - run: echo "This Workflow was triggered because 'Repository Events WorkFLOW' was completed"
