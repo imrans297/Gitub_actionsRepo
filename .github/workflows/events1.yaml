@@ -1,4 +1,4 @@
-name: Repository Events
+name: Repository Events1
 on:
   push:
     branches:
@@ -31,3 +31,5 @@ jobs:
           echo $GITHUB_SHA
           echo $GITHUB_REF
       - uses: actions/checkout@v4
+      - name: Run some commands
+        run: echo "First workflow running..."    
