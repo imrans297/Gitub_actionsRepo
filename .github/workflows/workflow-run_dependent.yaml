@@ -1,0 +1,14 @@
+name: Workflow Run
+on:
+  workflow_run:
+    workflows: ["Repository Events1"] # Reference the first workflow name
+    types: 
+      - completed # Trigger only when the first workflow completes
+    # branches:
+    #   - main  
+jobs:
+  echo-string:
+    runs-on: ubuntu-latest
+    steps:
+      - name: This is triggered after the first workflow completes
+        run: echo "Second workflow running because the first one completed!"
